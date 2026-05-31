@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+form{
+    border:2px solid #c4bdb2b9;
+    border-radius:15px;
+    width:60vw;
+    padding:3vh 2vw;
+    margin-left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    row-gap:2vh;
+    box-shadow:1px 1px 3px rgba(0,0,0,.1);
+}
+
+fieldset{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border:none;
+}
+
+fieldset:last-child{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+fieldset:last-child button{
+    padding:12px 20px;
+    border-radius:5px;
+    border:2px solid #c4bdb2b9;
+    cursor:pointer;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    border-radius:5px;
+    border:2px solid #c4bdb2b9;
+    padding:12px 15px;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.faixa{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.faixa input{
+    width:120px;
+}
+
+/* -------- TABLET -------- */
+
+@media (max-width:1024px){
+
+    form{
+        width:80vw;
+    }
+
+}
+
+/* -------- CELULAR -------- */
+
+@media (max-width:768px){
+
+    form{
+        width:95%;
+        padding:20px 15px;
+    }
+
+    .faixa{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .faixa input{
+        width:100%;
+    }
+
+    fieldset:last-child{
+        flex-direction:column;
+        width:100%;
+    }
+
+    fieldset:last-child button{
+        width:100%;
+    }
+
+    input,
+    textarea,
+    select{
+        font-size:16px;
+    }
+
+}
+
+/* -------- TELAS MUITO PEQUENAS -------- */
+
+@media (max-width:480px){
+
+    form h4{
+        font-size:18px;
+    }
+
+    label{
+        font-size:14px;
+    }
+
+}

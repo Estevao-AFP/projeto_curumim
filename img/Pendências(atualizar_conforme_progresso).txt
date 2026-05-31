@@ -1,0 +1,27 @@
+ENGENHARIA ------
+Diagrama de atividades☑;
+Rquisitos funcionais (corrigir);
+Regras de negócio (corrigir);
+Requisitos não funcionais(no momento não precisa);
+Diagrama de Use Case☑;
+Descrição do caso de uso(fazer);
+Protótpos - esclarecimento de requisitos(corrigir).
+-------------------------
+
+DESIGN DIGITAL----
+Wireframes(fazer);
+Protótipos alta fidelidade(melhorar e adicionar telas);
+Design System (Urgente) - guia de estilo:
+	A) paleta de cores;
+	B) tipografia;
+	C) ícones;
+	D) logo;
+	E) Componentes de interface(botões, modais, alertas etc.).
+-------------------------
+
+DESENVOLVIMENTO WEB (fazer)---
+Páginas estáticas + JS para comportamento;
+Componentes;
+Folhas de estilo (CSS);
+Integração mínima com dados locais (localStorage).
+-------------------------
