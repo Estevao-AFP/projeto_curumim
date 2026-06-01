@@ -42,19 +42,19 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
       <ul class="list-unstyled components">
         <p>Navegar>>></p>
         <li>
-          <a href="#menu">Gerenciar projetos</a>
+          <a href="projetos.html">Cadastrar projetos</a>
 
         </li>
         <li>
-          <a href="#menu">Gerenciar organizadores</a>
+          <a href="organizadores.html">Cadastrar organizadores</a>
 
 
         </li>
         <li>
-          <a href="#menu">Gerenciar recursos</a>
+          <a href="alocacao.html">Alocar recursos e organizadores</a>
         </li>
         <li>
-          <a href="#menu">Gerenciar doações </a>
+          <a href="doacoes">Gerenciar doações </a>
         </li>
 
 
@@ -70,26 +70,28 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
         <div class="container-fluid navbar-flex">
 
           <!-- esquerda -->
-          <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="background-color:#A71E1E; border: none;">
+          <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"
+            style="background-color:#A71E1E; border: none;">
             <i class="glyphicon glyphicon-align-left"></i>
           </button>
 
           <!-- centro -->
           <div class="btn-centro">
-            <button style="background-color:transparent; border: none; font-size: 18px; color: #A71E1E; font-weight: bold;">
+            <button
+              style="background-color:transparent; border: none; font-size: 18px; color: #A71E1E; font-weight: bold;">
               Novo Projeto
             </button>
           </div>
 
           <!-- direita -->
           <div class="nav-direita">
-              <img class="logo" src="img/download-removebg-preview.png" alt="">
+            <img class="logo" src="img/download-removebg-preview.png" alt="">
           </div>
 
         </div>
       </nav>
 
-          <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Page</a></li>
             </ul>
@@ -140,6 +142,64 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
           <button id="btn_salvar" style="color: white; background-color: #A71E1E; border: none;">Salvar Projeto</button>
         </fieldset>
       </form>
+
+      <form>
+        <h4 style="font-weight: bold;">Alocar organizadores</h4>
+        <fieldset>
+          <label for="organizadores">Organizadores</label>
+          <select id="organizadores" multiple>
+            <option>Ana Paula Santos</option>
+            <option>Carlos Oliveira</option>
+            <option>Maria Silva</option>
+            <option>João Pedro</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label for="projetoS">Projeto</label>
+          <select id="projetoS">
+            <option>Selecione um projeto</option>
+            <option>Artesanato</option>
+            <option>Cuido de mim</option>
+            <option>Gerações</option>
+          </select>
+        </fieldset>
+
+
+        <fieldset>
+          <button id="btn_cancelar">Cancelar</button>
+          <button id="btn_salvar" style="color: white; background-color: #A71E1E; border: none;">Alocar
+            organizadores</button>
+        </fieldset>
+      </form>
+      <div class="output">
+
+        <h3>Projetos cadastrados</h3>
+
+        <table id="projetoTable">
+
+          <thead>
+
+            <tr>
+
+              <th>Nome do Projeto</th>
+              <th>Descrição</th>
+              <th>Início</th>
+              <th>Término</th>
+              <th>Faixa Etária</th>
+              <th>Status</th>
+              <th>Organizadores</th>
+              <th>Ações</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody></tbody>
+
+        </table>
+
+      </div>
     </div>
   </div>
 
@@ -147,7 +207,13 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
 
 
   <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <!-- Bootstrap Js CDN -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- jQuery Custom Scroller CDN -->
@@ -164,6 +230,16 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
       });
     });
+
+    $(document).ready(function () {
+
+      $('#organizadores').select2({
+        placeholder: "Selecione organizadores",
+        width: "100%"
+      });
+
+    });
+
   </script>
 </body>
 

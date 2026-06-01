@@ -48,11 +48,6 @@ select{
     padding:12px 15px;
 }
 
-textarea{
-    min-height:120px;
-    resize:vertical;
-}
-
 .faixa{
     display:flex;
     align-items:center;
@@ -62,6 +57,107 @@ textarea{
 
 .faixa input{
     width:120px;
+}
+
+#projetoTable{
+    width:100%;
+    border-collapse:collapse;
+    min-width:850px;
+    border-radius:5px;
+}
+
+#projetoTable thead{
+    background:#A71E1E;
+    color:white;
+}
+
+#projetoTable th{
+    padding:15px;
+    text-align:left;
+    font-weight:600;
+    border: 1px solid #c4bdb2;
+}
+
+#projetoTable td{
+    padding:14px;
+    border-bottom:1px solid #c4bdb2;
+}
+
+#projetoTable tbody tr:hover{
+    background:#F5F0E8;
+}
+
+#projetoTable tbody tr:last-child td{
+    border-bottom:none;
+}
+
+/* ---------- RESPONSIVIDADE TABELA ---------- */
+
+@media (max-width:1024px){
+
+    .output{
+        width:95%;
+        padding:20px;
+    }
+
+    #projetoTable{
+        min-width:750px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .output{
+        width:100%;
+        padding:15px;
+        border-radius:10px;
+        overflow-x:auto;
+    }
+
+    .output h3{
+        font-size:20px;
+        margin-bottom:15px;
+    }
+
+    #projetoTable{
+        min-width:700px;
+    }
+
+    #projetoTable th,
+    #projetoTable td{
+        padding:10px;
+        font-size:14px;
+        white-space: nowrap;
+    }
+
+    .btn-editar,
+    .btn-excluir{
+        width:100%;
+        margin-bottom:5px;
+        font-size:13px;
+        padding:8px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .output{
+        padding:10px;
+    }
+
+    .output h3{
+        font-size:18px;
+        text-align:center;
+    }
+
+    #projetoTable th,
+    #projetoTable td{
+        font-size:12px;
+        padding:8px;
+    }
+
 }
 
 /* -------- TABLET -------- */
