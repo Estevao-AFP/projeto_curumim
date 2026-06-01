@@ -42,6 +42,9 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
             <ul class="list-unstyled components">
                 <p>Navegar>>></p>
                 <li>
+                    <a href="index.html">Página inicial</a>
+                </li>
+                <li>
                     <a href="projetos.html">Cadastrar projetos</a>
 
                 </li>
@@ -128,7 +131,7 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
                 </fieldset>
             </form>
 
-             <form>
+            <form>
                 <h4 style="font-weight: bold;">Alocar Recursos</h4>
                 <fieldset>
                     <label for="recursos">Recursos</label>
@@ -147,6 +150,18 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
                         <option>Cuido de mim</option>
                         <option>Gerações</option>
                     </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="quantidade_necessaria">Quantidade Necessária</label>
+                    <input id="quantidade_necessaria" name="quantidade_necessaria" type="number"
+                        placeholder="Quantidade" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="quantidade_atual">Quantidade Atual</label>
+                    <input id="quantidade_atual" name="quantidade_atual" type="number" placeholder="Quantidade"
+                        required>
                 </fieldset>
 
                 <fieldset>
@@ -220,7 +235,7 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
 
         });
 
-         $(document).ready(function () {
+        $(document).ready(function () {
 
             $('#recursos').select2({
                 placeholder: "Selecione recursos",

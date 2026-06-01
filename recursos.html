@@ -42,6 +42,9 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
             <ul class="list-unstyled components">
                 <p>Navegar>>></p>
                 <li>
+                    <a href="index.html">Página inicial</a>
+                </li>
+                <li>
                     <a href="projetos.html">Cadastrar projetos</a>
 
                 </li>
@@ -98,6 +101,43 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
             </ul>
           </div> -->
 
+            <form>
+                <h4 style="font-weight: bold;">Novo recurso</h4>
+                <fieldset>
+                    <label for="nome_recurso">Descrição do recurso</label>
+                    <input id="nome_recurso" name="nome_recurso" type="text" placeholder="Descrição" required>
+                </fieldset>
+
+                <fieldset>
+                    <button id="btn_cancelar">Cancelar</button>
+                    <button id="btn_salvar" style="color: white; background-color: #A71E1E; border: none;">Salvar
+                        Recurso</button>
+                </fieldset>
+            </form>
+
+
+            <div class="output">
+
+                <h3>Recursos cadastrados</h3>
+
+                <table id="projetoTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Descrição do Recurso</th>
+                            <th>Ações</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody></tbody>
+
+                </table>
+
+            </div>
 
         </div>
     </div>

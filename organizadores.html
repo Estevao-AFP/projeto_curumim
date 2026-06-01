@@ -42,6 +42,9 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
             <ul class="list-unstyled components">
                 <p>Navegar>>></p>
                 <li>
+                    <a href="index.html">Página inicial</a>
+                </li>
+                <li>
                     <a href="projetos.html">Cadastrar projetos</a>
 
                 </li>
@@ -80,7 +83,7 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
                     <div class="btn-centro">
                         <button
                             style="background-color:transparent; border: none; font-size: 18px; color: #A71E1E; font-weight: bold;">
-                            Cadastrar Organizadores
+                            Cadastrar organizadores
                         </button>
                     </div>
 
@@ -98,8 +101,59 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
             </ul>
           </div> -->
 
+            <form>
+                <h4 style="font-weight: bold;">Novo organizador</h4>
+                <fieldset>
+                    <label for="nome_organizador">Nome do organizador</label>
+                    <input id="nome_organizador" name="nome_organizador" type="text" placeholder="Nome" required>
+                </fieldset>
 
+                <fieldset>
+                    <label for="email_organizador">Email organizador</label>
+                    <input id="email_organizador" name="email_organizador" required placeholder="EMAIL" type="email">
+                </fieldset>
+
+                <fieldset>
+                    <button id="btn_cancelar">Cancelar</button>
+                    <button id="btn_salvar" style="color: white; background-color: #A71E1E; border: none;">Salvar
+                        Organizador</button>
+                </fieldset>
+            </form>
+
+
+            <div class="output">
+
+                <h3>Organizadores cadastrados</h3>
+
+                <table id="projetoTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Nome do Organizador</th>
+                            <th>Email</th>
+                            <th>Ações</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody></tbody>
+
+                </table>
+
+            </div>
         </div>
+
+        <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Page</a></li>
+            </ul>
+          </div> -->
+
+
+    </div>
     </div>
 
 
