@@ -12,7 +12,7 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Alocar Recursos e Organizadores</title>
+    <title>Gerenciar Doações</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -80,7 +80,7 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
                     <div class="btn-centro">
                         <button
                             style="background-color:transparent; border: none; font-size: 18px; color: #A71E1E; font-weight: bold;">
-                            Alocar Recursos e Organizadores
+                            Cadastrar novo recurso
                         </button>
                     </div>
 
@@ -98,88 +98,7 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
             </ul>
           </div> -->
 
-            <form>
-                <h4 style="font-weight: bold;">Alocar organizadores</h4>
-                <fieldset>
-                    <label for="organizadores">Organizadores</label>
-                    <select id="organizadores" multiple>
-                        <option>Ana Paula Santos</option>
-                        <option>Carlos Oliveira</option>
-                        <option>Maria Silva</option>
-                        <option>João Pedro</option>
-                    </select>
-                </fieldset>
 
-                <fieldset>
-                    <label for="projetoS">Projeto</label>
-                    <select id="projetoS">
-                        <option>Selecione um projeto</option>
-                        <option>Artesanato</option>
-                        <option>Cuido de mim</option>
-                        <option>Gerações</option>
-                    </select>
-                </fieldset>
-
-
-                <fieldset>
-                    <button id="btn_cancelar">Cancelar</button>
-                    <button id="btn_salvar" style="color: white; background-color: #A71E1E; border: none;">Alocar
-                        organizadores</button>
-                </fieldset>
-            </form>
-
-             <form>
-                <h4 style="font-weight: bold;">Alocar Recursos</h4>
-                <fieldset>
-                    <label for="recursos">Recursos</label>
-                    <select id="recursos" multiple>
-                        <option>Salão de Eventos</option>
-                        <option>Equipamentos de Som</option>
-                        <option>Material de Apoio</option>
-                    </select>
-                </fieldset>
-
-                <fieldset>
-                    <label for="projetoS">Projeto</label>
-                    <select id="projetoS">
-                        <option>Selecione um projeto</option>
-                        <option>Artesanato</option>
-                        <option>Cuido de mim</option>
-                        <option>Gerações</option>
-                    </select>
-                </fieldset>
-
-                <fieldset>
-                    <button id="btn_cancelar">Cancelar</button>
-                    <button id="btn_salvar" style="color: white; background-color: #A71E1E; border: none;">Alocar
-                        organizadores</button>
-                </fieldset>
-            </form>
-
-            <div class="output">
-
-                <h3>Organizadores e recursos</h3>
-
-                <table id="projetoTable">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>Nome do Projeto</th>
-                            <th>Organizadores</th>
-                            <th>Recursos</th>
-                            <th>Ações</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody></tbody>
-
-                </table>
-
-            </div>
         </div>
     </div>
 
@@ -215,15 +134,6 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
 
             $('#organizadores').select2({
                 placeholder: "Selecione organizadores",
-                width: "100%"
-            });
-
-        });
-
-         $(document).ready(function () {
-
-            $('#recursos').select2({
-                placeholder: "Selecione recursos",
                 width: "100%"
             });
 
