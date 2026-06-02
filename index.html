@@ -19,6 +19,7 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="css/style_sidebar.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
@@ -100,7 +101,26 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
               <li><a href="#">Page</a></li>
             </ul>
           </div> -->
+            <div class="projetos-container">
+                <h1>Nossos projetos</h1>
+                <p>Conheça nossos projetos e como você pode contribuir para eles.</p>
 
+                <fieldset class="filtros">
+
+                    <div class="pesquisa-box">
+                        <i class="glyphicon glyphicon-search"></i>
+
+                        <input type="text" placeholder="Pesquisar projetos...">
+                    </div>
+
+                    <select name="filtroStatus" id="filtroStatus">
+                        <option value="">Filtrar por status</option>
+                        <option value="ativo">Ativo</option>
+                        <option value="inativo">Inativo</option>
+                    </select>
+
+                </fieldset>
+            </div>
 
         </div>
     </div>
