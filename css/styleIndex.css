@@ -1,7 +1,4 @@
 .projetos-container{
-    border: 3px solid blue;
-
-    
     padding: 20px;
     border-radius: 10px;
 }
@@ -14,7 +11,6 @@
     flex-wrap: wrap;
     border: none;
     padding: 0;
-    margin-top: 20px;
 }
 
 /* caixa da pesquisa */
@@ -69,5 +65,87 @@
     .pesquisa-box{
         width: 100%;
     }
+
+}
+
+.centraliza-card {
+    width: 100%; /*ou*/
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-flip {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-flip > .front,
+.card-flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+
+.card-flip > .front {
+  transform: rotateY(0deg);
+}
+
+.card-flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+
+.card-flip:hover > .front {
+  transform: rotateY(180deg);
+}
+
+.card-flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.card-flip {
+  position: relative;
+  display: inline-block;
+  margin:10px;
+  width:100%;
+}
+
+.card-flip img { width:100%; }
+
+.card-flip > .front,
+.card-flip > .back {
+  display: block;
+  color: #f8e800;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 200px;
+  padding: 1em 2em;
+  background: #57698b;
+  border-radius: 10px;
+}
+
+.card-flip > .front p,
+.card-flip > .back p {
+  font-size: 1em;
+  line-height: 160%;
+  color: #ffffff;
+}
+
+.card-flip > .back a { color:#000; text-decoration:underline; font-weight:bold; }
+
+.text-shadow {
+
+    text-shadow: 2px 1px 5px #535353;
 
 }
