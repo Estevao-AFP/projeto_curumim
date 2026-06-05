@@ -25,6 +25,7 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
     <script src="js/script.js"></script>
+    <script src="js/cardFlip.js"></script>
 </head>
 
 <body>
@@ -44,6 +45,9 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
                 <p>Navegar>>></p>
                 <li class="active">
                     <a href="index.html">Página inicial</a>
+                </li>
+                <li>
+                    <a href="doar.html">Doar agora</a>
                 </li>
                 <li>
                     <a href="projetos.html">Cadastrar projetos</a>
@@ -125,28 +129,595 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
 
 
             <div class="projetos-cards">
-                <div class="centraliza-card">
 
-                    <div class="card-flip">
+                <div class="card-projeto" data-id="1">
 
-                        <div class="front" style="background-image: url('uploads/foto.jpg')">
-                            <h1 class="text-shadow">Front-end</hi>
-                        </div>
+                    <!-- imagem -->
+                    <div class="card-img">
 
-                        <div class="back">
-
-                            <h2>Loop Nerd</h2>
-                            <p>
-                                A expressão Lorem ipsum em design gráfico e editoração é um texto padrão
-                                em latim utilizado na produção gráfica para...
-                            </p>
-                            <a href="https://www.loopnerd.com.br/" target="_blank">Leia mais</a>
-
-                        </div>
+                        <img id="imgProjeto-1" src="img/ChatGPT Image 1 de jun. de 2026, 21_03_22.png" alt="Projeto">
 
                     </div>
 
-                </div><!--Centraliza Card-->
+                    <!-- conteúdo -->
+                    <div class="card-conteudo">
+
+                        <div class="cabecalho-card">
+
+                            <div class="titulo-status">
+
+                                <h2 id="nomeProjeto-1">
+                                    Aulas de Música
+                                </h2>
+
+                                <span class="status ativo" id="statusProjeto-1">
+
+                                    Ativo
+
+                                </span>
+
+                            </div>
+
+                            <p id="descricaoProjeto-1">
+
+                                Oferecemos aulas de música para crianças
+                                e adolescentes, promovendo aprendizado
+                                e inclusão social.
+
+                            </p>
+
+                        </div>
+
+                        <div class="infosProjeto">
+
+                            <div class="info">
+
+                                <span>Tema</span>
+
+                                <strong id="categoria-1">
+                                    Educação
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Público</span>
+
+                                <strong id="publico-1">
+                                    8 a 14 anos
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Local</span>
+
+                                <strong id="local-1">
+                                    Projeto Curumim
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Início</span>
+
+                                <strong id="inicio-1">
+                                    06/06/2025
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Término</span>
+
+                                <strong id="fim-1">
+                                    06/07/2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="recursos">
+
+                            <p>
+
+                                Recursos:
+
+                                <strong>
+
+                                    R$
+                                    <span id="captado-1">
+                                        6750
+                                    </span>
+
+                                </strong>
+
+                                de
+
+                                R$
+                                <span id="meta-1">
+                                    10000
+                                </span>
+
+                            </p>
+
+                            <div class="barra">
+
+                                <div class="progresso" id="barra-1">
+
+                                </div>
+
+                            </div>
+
+                        </div> -->
+
+                    </div>
+
+                    <!-- lateral -->
+                    <div class="acoes-card">
+
+                        <!-- <span class="porcentagem" id="porcentagem-1">
+
+                            68%
+
+                        </span> -->
+
+                        <button class="btn-doar">
+
+                            Doar agora
+
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="card-projeto" data-id="1">
+
+                    <!-- imagem -->
+                    <div class="card-img">
+
+                        <img id="imgProjeto-1" src="img/ChatGPT Image 1 de jun. de 2026, 21_03_22.png" alt="Projeto">
+
+                    </div>
+
+                    <!-- conteúdo -->
+                    <div class="card-conteudo">
+
+                        <div class="cabecalho-card">
+
+                            <div class="titulo-status">
+
+                                <h2 id="nomeProjeto-1">
+                                    Aulas de Música
+                                </h2>
+
+                                <span class="status ativo" id="statusProjeto-1">
+
+                                    Ativo
+
+                                </span>
+
+                            </div>
+
+                            <p id="descricaoProjeto-1">
+
+                                Oferecemos aulas de música para crianças
+                                e adolescentes, promovendo aprendizado
+                                e inclusão social.
+
+                            </p>
+
+                        </div>
+
+                        <div class="infosProjeto">
+
+                            <div class="info">
+
+                                <span>Tema</span>
+
+                                <strong id="categoria-1">
+                                    Educação
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Público</span>
+
+                                <strong id="publico-1">
+                                    8 a 14 anos
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Local</span>
+
+                                <strong id="local-1">
+                                    Projeto Curumim
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Início</span>
+
+                                <strong id="inicio-1">
+                                    06/06/2025
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Término</span>
+
+                                <strong id="fim-1">
+                                    06/07/2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="recursos">
+
+                            <p>
+
+                                Recursos:
+
+                                <strong>
+
+                                    R$
+                                    <span id="captado-1">
+                                        6750
+                                    </span>
+
+                                </strong>
+
+                                de
+
+                                R$
+                                <span id="meta-1">
+                                    10000
+                                </span>
+
+                            </p>
+
+                            <div class="barra">
+
+                                <div class="progresso" id="barra-1">
+
+                                </div>
+
+                            </div>
+
+                        </div> -->
+
+                    </div>
+
+                    <!-- lateral -->
+                    <div class="acoes-card">
+
+                        <!-- <span class="porcentagem" id="porcentagem-1">
+
+                            68%
+
+                        </span> -->
+
+                        <button class="btn-doar">
+
+                            Doar agora
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card-projeto" data-id="1">
+
+                    <!-- imagem -->
+                    <div class="card-img">
+
+                        <img id="imgProjeto-1" src="img/ChatGPT Image 1 de jun. de 2026, 21_03_22.png" alt="Projeto">
+
+                    </div>
+
+                    <!-- conteúdo -->
+                    <div class="card-conteudo">
+
+                        <div class="cabecalho-card">
+
+                            <div class="titulo-status">
+
+                                <h2 id="nomeProjeto-1">
+                                    Aulas de Música
+                                </h2>
+
+                                <span class="status ativo" id="statusProjeto-1">
+
+                                    Ativo
+
+                                </span>
+
+                            </div>
+
+                            <p id="descricaoProjeto-1">
+
+                                Oferecemos aulas de música para crianças
+                                e adolescentes, promovendo aprendizado
+                                e inclusão social.
+
+                            </p>
+
+                        </div>
+
+                        <div class="infosProjeto">
+
+                            <div class="info">
+
+                                <span>Tema</span>
+
+                                <strong id="categoria-1">
+                                    Educação
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Público</span>
+
+                                <strong id="publico-1">
+                                    8 a 14 anos
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Local</span>
+
+                                <strong id="local-1">
+                                    Projeto Curumim
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Início</span>
+
+                                <strong id="inicio-1">
+                                    06/06/2025
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Término</span>
+
+                                <strong id="fim-1">
+                                    06/07/2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="recursos">
+
+                            <p>
+
+                                Recursos:
+
+                                <strong>
+
+                                    R$
+                                    <span id="captado-1">
+                                        6750
+                                    </span>
+
+                                </strong>
+
+                                de
+
+                                R$
+                                <span id="meta-1">
+                                    10000
+                                </span>
+
+                            </p>
+
+                            <div class="barra">
+
+                                <div class="progresso" id="barra-1">
+
+                                </div>
+
+                            </div>
+
+                        </div> -->
+
+                    </div>
+
+                    <!-- lateral -->
+                    <div class="acoes-card">
+
+                        <!-- <span class="porcentagem" id="porcentagem-1">
+
+                            68%
+
+                        </span> -->
+
+                        <button class="btn-doar">
+
+                            Doar agora
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card-projeto" data-id="1">
+
+                    <!-- imagem -->
+                    <div class="card-img">
+
+                        <img id="imgProjeto-1" src="img/ChatGPT Image 1 de jun. de 2026, 21_03_22.png" alt="Projeto">
+
+                    </div>
+
+                    <!-- conteúdo -->
+                    <div class="card-conteudo">
+
+                        <div class="cabecalho-card">
+
+                            <div class="titulo-status">
+
+                                <h2 id="nomeProjeto-1">
+                                    Aulas de Música
+                                </h2>
+
+                                <span class="status ativo" id="statusProjeto-1">
+
+                                    Ativo
+
+                                </span>
+
+                            </div>
+
+                            <p id="descricaoProjeto-1">
+
+                                Oferecemos aulas de música para crianças
+                                e adolescentes, promovendo aprendizado
+                                e inclusão social.
+
+                            </p>
+
+                        </div>
+
+                        <div class="infosProjeto">
+
+                            <div class="info">
+
+                                <span>Tema</span>
+
+                                <strong id="categoria-1">
+                                    Educação
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Público</span>
+
+                                <strong id="publico-1">
+                                    8 a 14 anos
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Local</span>
+
+                                <strong id="local-1">
+                                    Projeto Curumim
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Início</span>
+
+                                <strong id="inicio-1">
+                                    06/06/2025
+                                </strong>
+
+                            </div>
+
+                            <div class="info">
+
+                                <span>Término</span>
+
+                                <strong id="fim-1">
+                                    06/07/2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="recursos">
+
+                            <p>
+
+                                Recursos:
+
+                                <strong>
+
+                                    R$
+                                    <span id="captado-1">
+                                        6750
+                                    </span>
+
+                                </strong>
+
+                                de
+
+                                R$
+                                <span id="meta-1">
+                                    10000
+                                </span>
+
+                            </p>
+
+                            <div class="barra">
+
+                                <div class="progresso" id="barra-1">
+
+                                </div>
+
+                            </div>
+
+                        </div> -->
+
+                    </div>
+
+                    <!-- lateral -->
+                    <div class="acoes-card">
+
+                        <!-- <span class="porcentagem" id="porcentagem-1">
+
+                            68%
+
+                        </span> -->
+
+                        <button class="btn-doar">
+
+                            Doar agora
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
             </div>
 
         </div>
