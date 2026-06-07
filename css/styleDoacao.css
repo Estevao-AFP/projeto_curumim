@@ -1,0 +1,110 @@
+.input-valor{
+
+    display:flex;
+
+}
+
+.input-valor span{
+
+    border:2px solid #c4bdb2b9;
+
+    border-right:none;
+
+    padding:12px 15px;
+
+    border-radius:5px 0 0 5px;
+
+    background:#F5F0E8;
+
+}
+
+.input-valor input{
+
+    border-radius:0 5px 5px 0;
+
+}
+
+.tipo-btn,
+.destino-card{
+
+    padding:12px 20px;
+
+    border:2px solid #c4bdb2b9;
+
+    border-radius:5px;
+
+    background:white;
+
+    cursor:pointer;
+
+}
+
+.tipo-btn.active,
+.destino-card.active{
+
+    border-color:#A71E1E;
+
+    color:#A71E1E;
+
+    font-weight:bold;
+
+}
+
+.pix-box{
+
+    border:2px solid #A71E1E;
+
+    padding:15px;
+
+    border-radius:5px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+}
+
+.resumo-box{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border:2px solid #c4bdb2b9;
+
+    border-radius:5px;
+
+    padding:15px;
+
+}
+
+.info-material{
+
+    border:2px solid #c4bdb2b9;
+
+    padding:20px;
+
+    border-radius:5px;
+
+    background:#F5F0E8;
+
+}
+
+.escondido{
+
+    display:none;
+
+}
+
+@media(max-width:768px){
+
+    .tipo-btn,
+    .destino-card{
+
+        width:100%;
+
+    }
+
+}

@@ -1,9 +1,3 @@
-<!--
-Source - https://stackoverflow.com/a/48476366
-Posted by Pravin Poudel, modified by community. See post 'Timeline' for change history
-Retrieved 2026-05-28, License - CC BY-SA 3.0
--->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,140 +6,244 @@ Retrieved 2026-05-28, License - CC BY-SA 3.0
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Gerenciar Doações</title>
+    <title>Doe agora!</title>
 
-    <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- Our Custom CSS -->
+
     <link rel="stylesheet" href="css/style_sidebar.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/styleDoacao.css">
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-
-    <script src="js/script.js"></script>
 </head>
 
 <body>
 
-
-
     <div class="wrapper">
-        <!-- Sidebar Holder -->
+
         <nav id="sidebar">
+
             <div class="sidebar-header">
                 <img class="logo" src="img/download-removebg-preview.png" alt="">
                 <h3>Projeto Curumim</h3>
-                </h3>
             </div>
 
             <ul class="list-unstyled components">
                 <p>Navegar>>></p>
+
                 <li>
                     <a href="index.html">Página inicial</a>
                 </li>
+
                 <li class="active">
-                    <a href="doar.html">Doar agora</a>  
+                    <a href="doar.html">Doar agora</a>
                 </li>
+
                 <li>
                     <a href="projetos.html">Cadastrar projetos</a>
-
                 </li>
+
                 <li>
                     <a href="organizadores.html">Cadastrar organizadores</a>
                 </li>
+
                 <li>
-                    <a href="recursos.html">Cadastrar recursos </a>
+                    <a href="recursos.html">Cadastrar recursos</a>
                 </li>
+
                 <li>
                     <a href="alocacao.html">Alocar recursos e organizadores</a>
                 </li>
+
                 <li>
-                    <a href="doacoes.html">Gerenciar doações </a>
+                    <a href="doacoes.html">Gerenciar doações</a>
                 </li>
-
-
             </ul>
-
 
         </nav>
 
-        <!-- Page Content Holder -->
         <div id="content">
 
             <nav class="navbar navbar-default">
+
                 <div class="container-fluid navbar-flex">
 
-                    <!-- esquerda -->
                     <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"
-                        style="background-color:#A71E1E; border: none;">
+                        style="background-color:#A71E1E; border:none;">
+
                         <i class="glyphicon glyphicon-align-left"></i>
+
                     </button>
 
-                    <!-- centro -->
                     <div class="btn-centro">
                         <button
-                            style="background-color:transparent; border: none; font-size: 18px; color: #A71E1E; font-weight: bold;">
+                            style="background-color:transparent; border:none; font-size:18px; color:#A71E1E; font-weight:bold;">
                             Dashboard Doações
                         </button>
                     </div>
 
-                    <!-- direita -->
                     <div class="nav-direita">
                         <img class="logo" src="img/download-removebg-preview.png" alt="">
                     </div>
 
                 </div>
+
             </nav>
 
-            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Page</a></li>
-            </ul>
-          </div> -->
+            <form id="formDoacao">
 
+                <h4 style="font-weight:bold;">Doação</h4>
+
+                <fieldset>
+
+                    <label>Tipo de doação</label>
+
+                    <div class="faixa">
+                        <button type="button" class="tipo-btn active" data-tipo="financeira">
+                            Financeira
+                        </button>
+
+                        <button type="button" class="tipo-btn" data-tipo="material">
+                            Material
+                        </button>
+                    </div>
+
+                </fieldset>
+
+                <fieldset id="areaValor">
+
+                    <label for="valorDoacao">Valor da doação</label>
+
+                    <div class="input-valor">
+                        <span>R$</span>
+                        <input id="valorDoacao" type="number" placeholder="0,00">
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <label>Destino da doação</label>
+
+                    <div class="faixa">
+
+                        <button type="button" class="destino-card active" data-destino="projeto">
+                            Projeto específico
+                        </button>
+
+                        <button type="button" class="destino-card" data-destino="geral">
+                            Curumim
+                        </button>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset id="campoProjeto">
+
+                    <label>Projeto</label>
+
+                    <select id="projeto">
+                        <option>Escolha um projeto</option>
+                        <option>Artesanato</option>
+                        <option>Cuido de Mim</option>
+                        <option>Gerações</option>
+                    </select>
+
+                </fieldset>
+
+                <fieldset id="campoMaterial" class="escondido">
+
+                    <label>Recurso / Material</label>
+
+                    <select id="material">
+                        <option>Escolha um recurso</option>
+                        <option>Material escolar</option>
+                        <option>Livros</option>
+                        <option>Brinquedos</option>
+                        <option>Equipamentos esportivos</option>
+                        <option>Roupas</option>
+                        <option>Alimentos</option>
+                    </select>
+
+                </fieldset>
+
+                <fieldset id="areaPagamento">
+
+                    <label>Forma de pagamento</label>
+
+                    <div class="pix-box">
+                        PIX
+                    </div>
+
+                </fieldset>
+
+                <fieldset id="resumoDoacao">
+
+                    <label>Resumo</label>
+
+                    <div class="resumo-box">
+                        <span>Total:</span>
+                        <strong id="valorResumo">R$ 0,00</strong>
+                    </div>
+
+                </fieldset>
+
+                <fieldset id="areaBotao">
+
+                    <button id="btn_salvar"
+                        style="background:#A71E1E;color:white;border:none;padding:10px 20px;border-radius:8px;">
+                        Finalizar doação
+                    </button>
+
+                </fieldset>
+
+                <fieldset id="instrucoesMaterial" class="escondido">
+
+                    <label>Como doar materiais?</label>
+
+                    <div class="info-material">
+                        <p>Leve o material até a unidade Curumim mais próxima.</p>
+                        <p>Identifique os itens para facilitar a triagem.</p>
+                    </div>
+
+                </fieldset>
+
+            </form>
 
         </div>
+
     </div>
 
-
-
-
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scriptDoacao.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <!-- Bootstrap Js CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- jQuery Custom Scroller CDN -->
+
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
+    <script>
 
+        $(document).ready(function () {
 
             $('#sidebarCollapse').on('click', function () {
+
                 $('#sidebar, #content').toggleClass('active');
+
                 $('.collapse.in').toggleClass('in');
+
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-            });
-        });
 
-        $(document).ready(function () {
-
-            $('#organizadores').select2({
-                placeholder: "Selecione organizadores",
-                width: "100%"
             });
 
         });
 
     </script>
+
 </body>
 
 </html>
