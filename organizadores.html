@@ -17,6 +17,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
     <script src="js/script.js"></script>
+    <script src="js/scriptOrganizadores.js"></script>
 </head>
 
 <body>
@@ -51,16 +52,16 @@
                 </li>
 
                 <li>
-                    <a href="recursos.html">Cadastrar recursos</a>
+                    <a href="materiais.html">Cadastrar materiais</a>
                 </li>
 
                 <li>
-                    <a href="alocacao.html">Alocar recursos e organizadores</a>
+                    <a href="alocacao.html">Alocar recursos</a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="doacoes.html">Gerenciar doações</a>
-                </li>
+                </li> -->
 
             </ul>
 
@@ -98,7 +99,7 @@
 
             </nav>
 
-            <form>
+            <form id="organizadorForm">
 
                 <h4 style="font-weight:bold;">Novo organizador</h4>
 
@@ -122,11 +123,11 @@
 
                 <fieldset>
 
-                    <button id="btn_cancelar">
+                    <button id="btn_cancelar" type="button">
                         Cancelar
                     </button>
 
-                    <button id="btn_salvar"
+                    <button id="btn_salvar" type="submit"
                         style="color:white; background-color:#A71E1E; border:none;">
 
                         Salvar Organizador
@@ -141,11 +142,12 @@
 
                 <h3>Organizadores cadastrados</h3>
 
-                <table id="projetoTable">
+                <table id="organizadorTable">
 
                     <thead>
 
                         <tr>
+                            <th>ID</th>
                             <th>Nome do Organizador</th>
                             <th>Email</th>
                             <th>Ações</th>

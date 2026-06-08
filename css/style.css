@@ -1,220 +1,271 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-form{
-    border:2px solid #c4bdb2b9;
-    border-radius:15px;
-    width:60vw;
-    padding:3vh 2vw;
-    margin-left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    flex-direction:column;
-    row-gap:2vh;
-    box-shadow:1px 1px 3px rgba(0,0,0,.1);
+/* ==========================================================================
+   ESTILIZAÇÃO DOS FORMULÁRIOS (MANTIDO ORIGINAL)
+   ========================================================================== */
+form {
+    border: 2px solid #c4bdb2b9;
+    border-radius: 15px;
+    width: 60vw;
+    padding: 3vh 2vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.1);
 }
 
-fieldset{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    border:none;
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
 }
 
-fieldset:last-child{
-    display:flex;
-    flex-direction:row;
-    justify-content:flex-start;
-    gap:20px;
-    flex-wrap:wrap;
+fieldset:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-fieldset:last-child button{
-    padding:12px 20px;
-    border-radius:5px;
-    border:2px solid #c4bdb2b9;
-    cursor:pointer;
+fieldset:last-child button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 2px solid #c4bdb2b9;
+    cursor: pointer;
 }
 
 input,
 textarea,
-select{
-    width:100%;
-    border-radius:5px;
-    border:2px solid #c4bdb2b9;
-    padding:12px 15px;
+select {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #c4bdb2b9;
+    padding: 12px 15px;
 }
 
-.faixa{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
+.faixa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.faixa input{
-    width:120px;
+.faixa input {
+    width: 120px;
 }
 
-#projetoTable{
-    width:100%;
-    border-collapse:collapse;
-    min-width:850px;
-    border-radius:5px;
+/* ==========================================================================
+   ESTILIZAÇÃO DAS TABELAS E BOTÕES INTERNOS (ATUALIZADO)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+    border-radius: 8px;
+    overflow: hidden; /* Garante o funcionamento dos cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-top: 15px;
 }
 
-#projetoTable thead{
-    background:#A71E1E;
-    color:white;
+table thead {
+    background: #A71E1E;
+    color: white;
 }
 
-#projetoTable th{
-    padding:15px;
-    text-align:left;
-    font-weight:600;
-    border: 1px solid #c4bdb2;
+table th {
+    padding: 16px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border: none; /* Suaviza o topo removendo bordas duras */
 }
 
-#projetoTable td{
-    padding:14px;
-    border-bottom:1px solid #c4bdb2;
+table td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #eae6df; /* Linha divisória mais sutil */
+    color: #444444;
+    vertical-align: middle; /* Alinha perfeitamente texto e botões */
 }
 
-#projetoTable tbody tr:hover{
-    background:#F5F0E8;
+table tbody tr {
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
 }
 
-#projetoTable tbody tr:last-child td{
-    border-bottom:none;
+table tbody tr:hover {
+    background: #F5F0E8;
 }
 
-/* ---------- RESPONSIVIDADE TABELA ---------- */
+table tbody tr:last-child td {
+    border-bottom: none;
+}
 
-@media (max-width:1024px){
+/* --- BOTÕES DE AÇÃO INTERNOS DA TABELA --- */
+.btn-editar,
+.btn-excluir {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
 
-    .output{
-        width:95%;
-        padding:20px;
+.btn-editar {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #ec971f;
+}
+
+.btn-excluir {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background-color: #c9302c;
+}
+
+.btn-editar:active,
+.btn-excluir:active {
+    transform: scale(0.95);
+}
+
+/* ==========================================================================
+   REGRAS DE RESPONSIVIDADE (MESCLADAS)
+   ========================================================================== */
+
+/* -------- DESKTOP ATÉ TABLET (1024px) -------- */
+@media (max-width: 1024px) {
+    .output {
+        width: 95%;
+        padding: 20px;
     }
 
-    #projetoTable{
-        min-width:750px;
+    table {
+        min-width: 750px;
     }
 
+    form {
+        width: 80vw;
+    }
 }
 
-@media (max-width:768px){
-
-    .output{
-        width:100%;
-        padding:15px;
-        border-radius:10px;
-        overflow-x:auto;
+/* -------- TABLET ATÉ CELULAR (768px) -------- */
+@media (max-width: 768px) {
+    .output {
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        overflow-x: auto;
     }
 
-    .output h3{
-        font-size:20px;
-        margin-bottom:15px;
+    .output h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
     }
 
-    #projetoTable{
-        min-width:700px;
+    table {
+        min-width: 700px;
     }
 
-    #projetoTable th,
-    #projetoTable td{
-        padding:10px;
-        font-size:14px;
+    table th,
+    table td {
+        padding: 12px 10px;
+        font-size: 14px;
         white-space: nowrap;
     }
 
+    /* Ajuste dos botões da tabela em telas touch */
     .btn-editar,
-    .btn-excluir{
-        width:100%;
-        margin-bottom:5px;
-        font-size:13px;
-        padding:8px;
+    .btn-excluir {
+        display: block;
+        width: 100%;
+        margin-bottom: 6px;
+        margin-right: 0;
+        font-size: 13px;
+        padding: 8px;
+        text-align: center;
     }
 
-}
-
-@media (max-width:480px){
-
-    .output{
-        padding:10px;
+    .btn-excluir {
+        margin-bottom: 0;
     }
 
-    .output h3{
-        font-size:18px;
-        text-align:center;
+    /* Elementos do Formulário no Mobile */
+    form {
+        width: 95%;
+        padding: 20px 15px;
     }
 
-    #projetoTable th,
-    #projetoTable td{
-        font-size:12px;
-        padding:8px;
+    .faixa {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-}
-
-/* -------- TABLET -------- */
-
-@media (max-width:1024px){
-
-    form{
-        width:80vw;
+    .faixa input {
+        width: 100%;
     }
 
-}
-
-/* -------- CELULAR -------- */
-
-@media (max-width:768px){
-
-    form{
-        width:95%;
-        padding:20px 15px;
+    fieldset:last-child {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .faixa{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .faixa input{
-        width:100%;
-    }
-
-    fieldset:last-child{
-        flex-direction:column;
-        width:100%;
-    }
-
-    fieldset:last-child button{
-        width:100%;
+    fieldset:last-child button {
+        width: 100%;
     }
 
     input,
     textarea,
-    select{
-        font-size:16px;
+    select {
+        font-size: 16px;
     }
-
 }
 
-/* -------- TELAS MUITO PEQUENAS -------- */
-
-@media (max-width:480px){
-
-    form h4{
-        font-size:18px;
+/* -------- SMARTPHONES PEQUENOS (480px) -------- */
+@media (max-width: 480px) {
+    .output {
+        padding: 10px;
     }
 
-    label{
-        font-size:14px;
+    .output h3 {
+        font-size: 18px;
+        text-align: center;
     }
 
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+
+    form h4 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 14px;
+    }
 }

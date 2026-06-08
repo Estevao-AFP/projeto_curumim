@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Alocar Recursos e Organizadores</title>
+    <title>Alocar Recursos</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -16,10 +16,10 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
 
     <script src="js/script.js"></script>
+    <script src="js/scriptAlocacao.js"></script>
 </head>
 
 <body>
@@ -54,16 +54,16 @@
                 </li>
 
                 <li>
-                    <a href="recursos.html">Cadastrar recursos</a>
+                    <a href="materiais.html">Cadastrar materiais</a>
                 </li>
 
                 <li class="active">
-                    <a href="alocacao.html">Alocar recursos e organizadores</a>
+                    <a href="alocacao.html">Alocar recursos</a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="doacoes.html">Gerenciar doações</a>
-                </li>
+                </li> -->
 
             </ul>
 
@@ -75,9 +75,7 @@
 
                 <div class="container-fluid navbar-flex">
 
-                    <button type="button"
-                        id="sidebarCollapse"
-                        class="btn btn-info navbar-btn"
+                    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"
                         style="background-color:#A71E1E; border:none;">
 
                         <i class="glyphicon glyphicon-align-left"></i>
@@ -89,7 +87,7 @@
                         <button
                             style="background-color:transparent; border:none; font-size:18px; color:#A71E1E; font-weight:bold;">
 
-                            Alocar Recursos e Organizadores
+                            Alocar Recursos
 
                         </button>
 
@@ -103,66 +101,17 @@
 
             </nav>
 
-            <form>
 
-                <h4 style="font-weight:bold;">Alocar organizadores</h4>
 
-                <fieldset>
-
-                    <label for="organizadores">Organizadores</label>
-
-                    <select id="organizadores" multiple>
-
-                        <option>Ana Paula Santos</option>
-                        <option>Carlos Oliveira</option>
-                        <option>Maria Silva</option>
-                        <option>João Pedro</option>
-
-                    </select>
-
-                </fieldset>
-
-                <fieldset>
-
-                    <label for="projetoS">Projeto</label>
-
-                    <select id="projetoS">
-
-                        <option>Selecione um projeto</option>
-                        <option>Artesanato</option>
-                        <option>Cuido de mim</option>
-                        <option>Gerações</option>
-
-                    </select>
-
-                </fieldset>
-
-                <fieldset>
-
-                    <button id="btn_cancelar">
-                        Cancelar
-                    </button>
-
-                    <button id="btn_salvar"
-                        style="color:white; background-color:#A71E1E; border:none;">
-
-                        Alocar organizadores
-
-                    </button>
-
-                </fieldset>
-
-            </form>
-
-            <form>
+            <form id="formMateriais">
 
                 <h4 style="font-weight:bold;">Alocar Recursos</h4>
 
                 <fieldset>
 
-                    <label for="recursos">Recursos</label>
+                    <label for="materiais">Material</label>
 
-                    <select id="recursos" multiple>
+                    <select id="materiais">
 
                         <option>Salão de Eventos</option>
                         <option>Equipamentos de Som</option>
@@ -174,9 +123,9 @@
 
                 <fieldset>
 
-                    <label for="projetoS">Projeto</label>
+                    <label for="projetoMaterial">Projeto</label>
 
-                    <select id="projetoS">
+                    <select id="projetoMaterial">
 
                         <option>Selecione um projeto</option>
                         <option>Artesanato</option>
@@ -191,11 +140,8 @@
 
                     <label for="quantidade_necessaria">Quantidade Necessária</label>
 
-                    <input id="quantidade_necessaria"
-                        name="quantidade_necessaria"
-                        type="number"
-                        placeholder="Quantidade"
-                        required>
+                    <input id="quantidade_necessaria" name="quantidade_necessaria" type="number"
+                        placeholder="Quantidade" required>
 
                 </fieldset>
 
@@ -203,24 +149,20 @@
 
                     <label for="quantidade_atual">Quantidade Atual</label>
 
-                    <input id="quantidade_atual"
-                        name="quantidade_atual"
-                        type="number"
-                        placeholder="Quantidade"
+                    <input id="quantidade_atual" name="quantidade_atual" type="number" placeholder="Quantidade"
                         required>
 
                 </fieldset>
 
                 <fieldset>
 
-                    <button id="btn_cancelar">
+                    <button id="cancelarMat" type="button">
                         Cancelar
                     </button>
 
-                    <button id="btn_salvar"
-                        style="color:white; background-color:#A71E1E; border:none;">
+                    <button id="salvarMat" type="submit" style="color:white; background-color:#A71E1E; border:none;">
 
-                        Alocar organizadores
+                        Alocar materiais
 
                     </button>
 
@@ -230,17 +172,20 @@
 
             <div class="output">
 
-                <h3>Organizadores e recursos</h3>
+                <h3>Recursos alocados</h3>
 
-                <table id="projetoTable">
+                <table id="alocacaoTable">
 
                     <thead>
 
                         <tr>
-                            <th>Nome do Projeto</th>
-                            <th>Organizadores</th>
+
+                            <th>Projeto</th>
+
                             <th>Recursos</th>
+
                             <th>Ações</th>
+
                         </tr>
 
                     </thead>
@@ -261,7 +206,8 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script>
 
@@ -282,8 +228,8 @@
                 width: "100%"
             });
 
-            $('#recursos').select2({
-                placeholder: "Selecione recursos",
+            $('#materiais').select2({
+                placeholder: "Selecione materiais",
                 width: "100%"
             });
 

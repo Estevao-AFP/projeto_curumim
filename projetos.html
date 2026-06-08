@@ -20,6 +20,7 @@
         href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
 
     <script src="js/script.js"></script>
+    <script src="js/scriptProjetos.js"></script>
 </head>
 
 <body>
@@ -54,16 +55,16 @@
                 </li>
 
                 <li>
-                    <a href="recursos.html">Cadastrar recursos</a>
+                    <a href="materiais.html">Cadastrar materiais</a>
                 </li>
 
                 <li>
-                    <a href="alocacao.html">Alocar recursos e organizadores</a>
+                    <a href="alocacao.html">Alocar recursos</a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="doacoes.html">Gerenciar doações</a>
-                </li>
+                </li> -->
 
             </ul>
 
@@ -103,7 +104,7 @@
 
             </nav>
 
-            <form>
+            <form id="projetoForm">
 
                 <h4 style="font-weight:bold;">Informações gerais</h4>
 
@@ -139,8 +140,7 @@
                     <label for="dt_termino">Data de término</label>
 
                     <input id="dt_termino"
-                        type="date"
-                        required>
+                        type="date">
                 </fieldset>
 
                 <fieldset>
@@ -177,11 +177,6 @@
 
                         <select id="organizadores" multiple required>
 
-                            <option>Ana Paula Santos</option>
-                            <option>Carlos Oliveira</option>
-                            <option>Maria Silva</option>
-                            <option>João Pedro</option>
-
                         </select>
 
                     </fieldset>
@@ -199,7 +194,7 @@
 
                 <fieldset>
 
-                    <button id="btn_cancelar">
+                    <button id="btn_cancelar" type="button">
                         Cancelar
                     </button>
 
@@ -223,6 +218,7 @@
                     <thead>
 
                         <tr>
+                            <th>ID</th>
                             <th>Nome do Projeto</th>
                             <th>Descrição</th>
                             <th>Início</th>

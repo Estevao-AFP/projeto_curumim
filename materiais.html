@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Gerenciar Doações</title>
+    <title>Gerenciar materiais</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -17,6 +17,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
     <script src="js/script.js"></script>
+    <script src="js/scriptMateriais.js"></script>
 </head>
 
 <body>
@@ -51,16 +52,16 @@
                 </li>
 
                 <li class="active">
-                    <a href="recursos.html">Cadastrar recursos</a>
+                    <a href="materiais.html">Cadastrar materiais</a>
                 </li>
 
                 <li>
-                    <a href="alocacao.html">Alocar recursos e organizadores</a>
+                    <a href="alocacao.html">Alocar recursos</a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="doacoes.html">Gerenciar doações</a>
-                </li>
+                </li> -->
 
             </ul>
 
@@ -72,9 +73,7 @@
 
                 <div class="container-fluid navbar-flex">
 
-                    <button type="button"
-                        id="sidebarCollapse"
-                        class="btn btn-info navbar-btn"
+                    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"
                         style="background-color:#A71E1E; border:none;">
 
                         <i class="glyphicon glyphicon-align-left"></i>
@@ -86,7 +85,7 @@
                         <button
                             style="background-color:transparent; border:none; font-size:18px; color:#A71E1E; font-weight:bold;">
 
-                            Cadastrar novo recurso
+                            Cadastrar novo material
 
                         </button>
 
@@ -100,30 +99,25 @@
 
             </nav>
 
-            <form>
+            <form id="materialForm">
 
-                <h4 style="font-weight:bold;">Novo recurso</h4>
+                <h4 style="font-weight:bold;">Novo material</h4>
 
                 <fieldset>
-                    <label for="nome_recurso">Descrição do recurso</label>
+                    <label for="nome_material">Descrição do material</label>
 
-                    <input id="nome_recurso"
-                        name="nome_recurso"
-                        type="text"
-                        placeholder="Descrição"
-                        required>
+                    <input id="nome_material" name="nome_material" type="text" placeholder="Descrição" required>
                 </fieldset>
 
                 <fieldset>
 
-                    <button id="btn_cancelar">
+                    <button id="btn_cancelar" type="button">
                         Cancelar
                     </button>
 
-                    <button id="btn_salvar"
-                        style="color:white; background-color:#A71E1E; border:none;">
+                    <button id="btn_salvar" type="submit" style="color:white; background-color:#A71E1E; border:none;">
 
-                        Salvar Recurso
+                        Salvar Material
 
                     </button>
 
@@ -133,14 +127,15 @@
 
             <div class="output">
 
-                <h3>Recursos cadastrados</h3>
+                <h3>Materiais cadastrados</h3>
 
-                <table id="projetoTable">
+                <table id="materialTable">
 
                     <thead>
 
                         <tr>
-                            <th>Descrição do Recurso</th>
+                            <th>ID</th>
+                            <th>Descrição do Material</th>
                             <th>Ações</th>
                         </tr>
 
@@ -160,7 +155,8 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script>
 
