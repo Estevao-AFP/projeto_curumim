@@ -418,7 +418,7 @@ function carregarTabela(){
 
             ${r.materialNome}
 
-            (${r.quantidadeNecessaria}/${r.quantidadeAtual})
+            (${r.quantidadeAtual}/${r.quantidadeNecessaria})
 
             <br>
 
